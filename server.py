@@ -28,7 +28,7 @@ while True:
     length = struct.unpack(">I", c.recv(4))[0]
     print(length)
     t = length
-    pos = struct.unpack(f"{length}s", c.recv(t))[0]
+    pos = struct.unpack(f">{length}s", c.recv(t))[0]
     image = Image.open(io.BytesIO(pos))
     image.show()
     # print(pos)

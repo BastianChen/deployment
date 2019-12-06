@@ -4,6 +4,7 @@ from PIL import Image
 import os
 
 image_path = r"C:\Users\Administrator\Desktop\test\5.jpg"
+# 将图片以二进制流的形式读出
 image_data = open(image_path, "rb")
 image_length = os.path.getsize(image_path)
 data = image_data.read(image_length)
