@@ -3,15 +3,18 @@ import struct
 from PIL import Image
 import os
 
-image_path = r"C:\Users\Administrator\Desktop\test\5.jpg"
+image_path = r"D:\sample\card\mycard\all\微信图片_20191202094016.jpg"
+# image_path = r"a.png"
 # 将图片以二进制流的形式读出
 image_data = open(image_path, "rb")
 image_length = os.path.getsize(image_path)
 data = image_data.read(image_length)
+print(data)
 print(image_length)
 
 s = socket.socket()  # 创建 socket 对象
-host = '192.168.2.47'  # 获取本地主机名
+# host = '192.168.2.47'  # 获取本地主机名
+host = '192.168.2.70'  # 获取本地主机名
 port = 8080  # 设置端口号
 
 s.connect((host, port))
