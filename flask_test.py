@@ -56,5 +56,5 @@ def post_test():
 
 if __name__ == '__main__':
     app.config['JSON_AS_ASCII'] = False
-    app.run(host='127.0.0.1', port=8080)
+    app.run(host='127.0.0.1', port=8080)  # host为0.0.0.0时开启局域网访问
     # app.run()

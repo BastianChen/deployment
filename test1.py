@@ -44,8 +44,8 @@ def socket_client():
             # 定义文件头信息，包含文件名和文件大小
             fhead = struct.pack(
                 '128sl',
-                os.path.basename(filepath).encode(encoding="utf-8"),
-                os.stat(filepath).st_size
+                os.path.basename(filepath).encode(encoding="utf-8"),  # 获取文件名
+                os.stat(filepath).st_size  # 获取文件大小
             )
             print('client filepath: {0}'.format(filepath))
             s.send(fhead)
